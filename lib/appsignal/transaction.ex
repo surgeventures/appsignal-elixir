@@ -1,7 +1,9 @@
 defmodule Appsignal.TransactionBehaviour do
-  @callback start(String.t, String.t) :: Appsignal.Transaction.t
-  @callback start_event() :: Appsignal.Transaction.t
-  @callback finish_event(Appsignal.Transaction.t | nil, String.t, String.t, any, integer) :: Appsignal.Transaction.t
+  alias Appsignal.Transaction
+
+  @callback start(String.t, String.t) :: Transaction.t
+  @callback start_event() :: Transaction.t
+  @callback finish_event(Transaction.t | nil, String.t, String.t, any, integer) :: Transaction.t
   @callback finish() :: :sample | :no_sample
   @callback finish(Transaction.t | nil) :: :sample | :no_sample
   @callback complete() :: :ok
