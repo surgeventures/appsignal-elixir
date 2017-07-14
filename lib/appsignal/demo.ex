@@ -1,6 +1,6 @@
 defmodule Appsignal.DemoBehaviour do
-  @callback create_transaction_error_request :: nil
-  @callback create_transaction_performance_request :: nil
+  @callback create_transaction_error_request :: :ok
+  @callback create_transaction_performance_request :: :ok
 end
 
 defmodule Appsignal.Demo do
