@@ -1,5 +1,5 @@
 defmodule Appsignal.Diagnose.ReportBehaviour do
-  @callback send(Appsignal.Config.t, %{}) :: {:ok, String.t}
+  @callback send(map(), map()) :: {:ok, String.t}
 end
 
 defmodule Appsignal.Diagnose.Report do
